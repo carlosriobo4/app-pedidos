@@ -1,4 +1,4 @@
-import {Entity, model, property, belongsTo, hasOne} from '@loopback/repository';
+import {belongsTo, Entity, hasOne, model, property} from '@loopback/repository';
 import {Persona} from './persona.model';
 import {Producto} from './producto.model';
 
@@ -34,13 +34,6 @@ export class Pedido extends Entity {
     required: true,
   })
   estado: number;
-
-/* @property({
-    type: 'string',
-    required: true,
-  })
-  idPersona: string;
-*/
 
   @belongsTo(() => Persona)
   personaId: string;
